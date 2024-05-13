@@ -1,0 +1,44 @@
+nav {
+  border-bottom: 1px solid rgb(58, 68, 76);
+  padding-top: 2.76vh;
+  padding-bottom: 2.76vh;
+
+}
+
+nav>div.wrapper {
+  width: 79%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.logo:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.3)
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+}
+
+.nav-items>li {
+  padding-left: 20px;
+}
+
+.nav-items>li>:hover {
+  color: rgba(255, 255, 255, 0.3)
+}
+
+.nav-items>li>a {
+  padding-left: 20px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
