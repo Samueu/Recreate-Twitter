@@ -7,16 +7,16 @@ import Link from "next/link";
 export default function Tweet({ props }) {
   console.log(props)
   return (
-    <Link href={`/tweet/${props.id}`} className="tweet">
+    <Link href={`/tweet/${props?.id}`} className="tweet">
       <img src="https://github.com/samueu.png" alt="Imagem de perfil" />
 
       <div className="tweet-content">
         <div className="tweet-content-header">
-          <strong>{props.author.nome}</strong>
-          <span>@{props.author.bio}</span>
+          <strong>{props?.author?.nome}</strong>
+          <span>@{props?.author?.bio}</span>
         </div>
 
-        <p>{props.content}</p>
+        <p>{props?.content}</p>
 
         <div className="tweet-content-footer">
           <button type="button">

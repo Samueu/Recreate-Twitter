@@ -12,11 +12,9 @@ export default function Body() {
 
   const getTweets = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/tweets")
-
+      const response = await axios.get(`http://localhost:5000`)
       const data = response.data;
       setTweets(data);
-      console.log(tweets.id);
     } catch (err) {
       console.log(err);
     }

@@ -8,32 +8,33 @@ import { useEffect, useState } from "react"
 
 
 
-export default function produto() {
+export default function Body() {
+
+  const [tweet, setTweet] = useState();
 
   const { id } = useParams()
 
-  const [tweets, setTweets] = useState([]);
-
-  const getTweets = async () => {
+  const getTweet = async () => {
     try {
       const response = await axios.get(`http://localhost:5000/tweets/${id}`)
-
-      const post = response.data;
-      setTweets(post);
-      console.log(response.data);
+      const data = response.data;
+      setTweet(data)
     } catch (err) {
-      console.log(err);
+      console.log(err)
     }
   }
   useEffect(() => {
-    getTweets();
+    getTweet();
   }, [])
 
   return (
     <div className="body-wrapper">
       <Tweet
-        props={tweets} key={tweets.id} tweet={tweets.id}
+        props={tweet}
+        key={tweet?.id}
+        tweet={tweet?.id}
       />
+      {console.log(tweet)}
     </div>
   )
 
